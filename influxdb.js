@@ -13,8 +13,8 @@ let queryClient = client.getQueryApi(org)
 function getData(dataName, range){
 
     let fluxQuery = `from(bucket: "bbq-temps")
-    |> range(start: ${str(range)})
-    |> filter(fn: (r) => r._measurement == ${str(dataName)})`
+    |> range(start: ${range})
+    |> filter(fn: (r) => r._measurement == ${dataName})`
 
     queryClient.queryRows(fluxQuery, {
     next: (row, tableMeta) => {
@@ -31,5 +31,8 @@ function getData(dataName, range){
 
 }
 
-getData("temp1", "-10m")
+let temp1 = "temp1"
+let queryLength = "-10m"
+
+getData(temp1, queryLength)
 
