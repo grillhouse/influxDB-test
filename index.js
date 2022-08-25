@@ -2,7 +2,7 @@
 
 const {InfluxDB, Point} = require('@influxdata/influxdb-client')
 
-const token = "nW9s_VqKP3hxVJRhfOr7Wnjz7f-7Kr2PCLWmZURmNIHK3AlB9ct-jAzVUBYAPKcdh31uGZcvFPejh8OC4McLLg==" 
+const token = "1NQJpwTYvCeUVn0Axuoo21LX3gmq3Ln3lvQNHPDHMo0HOkjL2VIIm_DXRuIlPg9o_B1JPd4SMsVowE-CpjlQIA==" 
 const url = 'https://europe-west1-1.gcp.cloud2.influxdata.com'
 
 const client = new InfluxDB({url, token})
