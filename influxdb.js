@@ -7,10 +7,10 @@ const client = "nW9s_VqKP3hxVJRhfOr7Wnjz7f-7Kr2PCLWmZURmNIHK3AlB9ct-jAzVUBYAPKcd
 
 // Write data
 let org = `robin.linuxos@gmail.com`
+let queryClient = client.getQueryApi(org)
 
 function getData(dataName, range){
-    
-    let queryClient = client.getQueryApi(org)
+
     let fluxQuery = `from(bucket: "bbq-temps")
     |> range(start: ${range})
     |> filter(fn: (r) => r._measurement == ${dataName})`
