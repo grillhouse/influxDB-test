@@ -22,6 +22,8 @@ for value in range(5):
   write_api.write(bucket=bucket, org="robin.linuxos@gmail.com", record=point)
   time.sleep(1) # separate points by 1 second
 
+
+## Query starts here ##
 query_api = client.query_api()
 
 query = """from(bucket: "bucket")
