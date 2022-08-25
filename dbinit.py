@@ -34,3 +34,16 @@ tables = query_api.query(query, org="robin.linuxos@gmail.com")
 for table in tables:
   for record in table.records:
     print(record)
+
+## Agrregate Query ##
+query_api = client.query_api()
+
+query = """from(bucket: "bucket")
+  |> range(start: -10m)
+  |> filter(fn: (r) => r._measurement == "measurement1")
+  |> mean()"""
+tables = query_api.query(query, org="robin.linuxos@gmail.com")
+
+for table in tables:
+    for record in table.records:
+        print(record)
