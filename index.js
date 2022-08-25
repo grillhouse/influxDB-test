@@ -1,4 +1,4 @@
-repl.repl.ignoreUndefined=true
+//repl.repl.ignoreUndefined=true
 
 const {InfluxDB, Point} = require('@influxdata/influxdb-client')
 
