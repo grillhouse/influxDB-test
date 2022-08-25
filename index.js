@@ -29,8 +29,8 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Simple query
-
 let queryClient = client.getQueryApi(org)
+
 let fluxQuery = `from(bucket: "nodeBucket")
  |> range(start: -10m)
  |> filter(fn: (r) => r._measurement == "measurement1")`
