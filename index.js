@@ -2,7 +2,7 @@
 
 const {InfluxDB, Point} = require('@influxdata/influxdb-client')
 
-const token = process.env.INFLUXDB_TOKEN_NODE
+const token = "nW9s_VqKP3hxVJRhfOr7Wnjz7f-7Kr2PCLWmZURmNIHK3AlB9ct-jAzVUBYAPKcdh31uGZcvFPejh8OC4McLLg==" 
 const url = 'https://europe-west1-1.gcp.cloud2.influxdata.com'
 
 const client = new InfluxDB({url, token})
@@ -10,7 +10,7 @@ const client = new InfluxDB({url, token})
 // Write data
 
 let org = `robin.linuxos@gmail.com`
-let bucket = `nodeBucket`
+let bucket = `bbq-temps`
 
 let writeClient = client.getWriteApi(org, bucket, 'ns')
 
@@ -31,7 +31,7 @@ for (let i = 0; i < 5; i++) {
 // Simple query
 let queryClient = client.getQueryApi(org)
 
-let fluxQuery = `from(bucket: "nodeBucket")
+let fluxQuery = `from(bucket: "bbq-temps")
  |> range(start: -10m)
  |> filter(fn: (r) => r._measurement == "measurement1")`
 
@@ -51,7 +51,7 @@ queryClient.queryRows(fluxQuery, {
 // aggregate querry 
 
 queryClient = client.getQueryApi(org)
-fluxQuery = `from(bucket: "nodeBucket")
+fluxQuery = `from(bucket: "bbq-temps")
  |> range(start: -10m)
  |> filter(fn: (r) => r._measurement == "measurement1")
  |> mean()`
