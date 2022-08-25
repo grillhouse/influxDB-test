@@ -1,0 +1,22 @@
+{
+  "name": "influxdb-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grillhouse/influxDB-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grillhouse/influxDB-test/issues"
+  },
+  "homepage": "https://github.com/grillhouse/influxDB-test#readme",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.28.0"
+  }
+}
