@@ -4,7 +4,7 @@ import time
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
-token = os.environ.get("INFLUXDB_TOKEN")
+token = "1NQJpwTYvCeUVn0Axuoo21LX3gmq3Ln3lvQNHPDHMo0HOkjL2VIIm_DXRuIlPg9o_B1JPd4SMsVowE-CpjlQIA=="
 org = "robin.linuxos@gmail.com"
 url = "https://europe-west1-1.gcp.cloud2.influxdata.com"
 
