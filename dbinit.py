@@ -9,7 +9,7 @@ url = "https://europe-west1-1.gcp.cloud2.influxdata.com"
 client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
 
 
-bucket="<BUCKET>"
+bucket="bucket"         #this is the bucket setup in influxDB (will be done programatically in future)
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
    
